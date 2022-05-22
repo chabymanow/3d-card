@@ -5,7 +5,11 @@ HTML + CSS + JavaScript
 It is a card on a HTML page which is moving, rotating with the mouse. 
 Just hover the cursor to the card and it will be turn to 3D card and rotating.
 
-There is 2 HTML files. The `index.html` is a multiple card demo. There is 3 different card and the effect run on each card when the cursor hovering on it.
+There are 3 HTML files. 
+The `index.html` just a page with two link to the two other HTML page. Nothing to see here.
+
+The `star_wars.html` is a multiple card demo with some kind of Star Wars theme. There is 3 different card and the effect run on each card when the cursor hovering on it.
+
 The `laptop.html` is a single card, a product card demo with product image, a short description and the price on it. And a button off course.
 
 ---
