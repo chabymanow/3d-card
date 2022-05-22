@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+  body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    perspective: 500px;
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .card_container{
+    width: 300px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+  }
+  
+  .card{
+    width: 200px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background: #d8de23;
+    color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5), 0 0 30px rgba(0, 0, 0, .3);
+    transform-style: preserve-3d;
+    position: absolute;
+  }
+
+  .card-back{
+      position:fixed;
+      min-width: 200px;
+      min-height: 350px;
+      border-radius: 25px;
+      background: #161616;
+      clip-path: polygon(0 50%, 100% 20%, 100% 100%, 0% 100%);
+      transition: all 400ms ease-in-out;
+      z-index: 0;
+  }
+
+  .card:hover .card-back{
+    clip-path: polygon(0 10%, 100% 60%, 100% 100%, 0% 100%);
+  }
+  
+  .image{
+    position: relative;
+    width: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+  }
+
+.image img{
+    position: relative;
+    top: 0;
+    left: 10%;
+    bottom: 80%;
+    right: 20%;
+    width: 180px;
+    height: auto;
+    max-height: 150px;
+    padding-top: .1em;
+    margin-left: -30px;
+    z-index: 4;
+    transition: all 400ms ease-in-out;
+  }
+  
+  .card h1{
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    text-align: center;
+    z-index: 3;
+    transition: all 400ms ease-in-out;
+    padding: .1em .7em;
+  }
+  
+  .card h3{
+    font-size: .9em;
+    margin-bottom: 1em;
+    z-index: 2;
+    transition: all 400ms ease-in-out;
+    padding: .1em .7em;
+  }
+  
+  .info{
+    transform-style: preserve-3d;
+  }
+
+  .card p{
+    font-size: .7em;
+    z-index: 1;
+    transition: all 400ms ease-in-out;
+    color: #e3e3e3;
+    line-height: 150%;
+    padding: .1em .7em;
+  }
+
+  .card button{
+      width: 100px;
+      height: 40px;
+      background: #bfc421;
+      color: #1f1f1f;
+      font-weight: 300;
+      font-size: 1.2em;
+      margin-top: .5em;
+      margin: 0 auto;
+      padding: 0 .5em;
+      border: none;
+      border-radius: 50px;
+      z-index: 6;
+  }
+
+  .info .price{
+    color: red;
+    font-size: 1.6em;
+    font-weight: 800;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 400ms ease-in-out;
+  }
